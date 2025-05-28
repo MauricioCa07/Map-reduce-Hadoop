@@ -1,3 +1,0 @@
-[submodule "messages_oriented_middleware/messages_oriented_middleware/middleware/grpc"]
-	path = messages_oriented_middleware/messages_oriented_middleware/middleware/grpc
-	url = https://github.com/CrowCpp/Crow.git

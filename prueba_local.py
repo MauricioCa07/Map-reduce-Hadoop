@@ -14,9 +14,11 @@ class NameWordCounter(MRJob):
             self.header = row
         else:
             row_dict = dict(zip(self.header, row))
-            name_field = row_dict.get("Director")
+
+            name_field = row_dict.get("Film_title")
             if name_field:
-                 yield name_field, 1
+                for word in name_field.split():
+                    yield word.lower(), 1
 
     def combiner(self, key, values):
         yield key, sum(values)

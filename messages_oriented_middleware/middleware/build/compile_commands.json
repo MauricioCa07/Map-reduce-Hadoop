@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/app/build",
+  "command": "/usr/bin/c++  -I/app/build -std=gnu++17 -o CMakeFiles/protolib.dir/mom.pb.cc.o -c /app/mom.pb.cc",
+  "file": "/app/mom.pb.cc",
+  "output": "CMakeFiles/protolib.dir/mom.pb.cc.o"
+},
+{
+  "directory": "/app/build",
+  "command": "/usr/bin/c++  -I/app/build -std=gnu++17 -o CMakeFiles/protolib.dir/mom.grpc.pb.cc.o -c /app/mom.grpc.pb.cc",
+  "file": "/app/mom.grpc.pb.cc",
+  "output": "CMakeFiles/protolib.dir/mom.grpc.pb.cc.o"
+},
+{
+  "directory": "/app/build",
+  "command": "/usr/bin/c++ -DCARES_STATICLIB -I/app/build -std=gnu++17 -o CMakeFiles/server.dir/src/server.cc.o -c /app/src/server.cc",
+  "file": "/app/src/server.cc",
+  "output": "CMakeFiles/server.dir/src/server.cc.o"
+},
+{
+  "directory": "/app/build",
+  "command": "/usr/bin/c++ -DCARES_STATICLIB -I/app/build -std=gnu++17 -o CMakeFiles/server.dir/src/queue_obj.cc.o -c /app/src/queue_obj.cc",
+  "file": "/app/src/queue_obj.cc",
+  "output": "CMakeFiles/server.dir/src/queue_obj.cc.o"
+},
+{
+  "directory": "/app/build",
+  "command": "/usr/bin/c++ -DCARES_STATICLIB -I/app/build -std=gnu++17 -o CMakeFiles/server.dir/src/queue_list.cc.o -c /app/src/queue_list.cc",
+  "file": "/app/src/queue_list.cc",
+  "output": "CMakeFiles/server.dir/src/queue_list.cc.o"
+}
+]

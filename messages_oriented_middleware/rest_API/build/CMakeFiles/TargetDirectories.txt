@@ -1,0 +1,3 @@
+/home/laptop1/Desktop/codes/messages_middleware_oriented/rest_API/build/CMakeFiles/mom.dir
+/home/laptop1/Desktop/codes/messages_middleware_oriented/rest_API/build/CMakeFiles/edit_cache.dir
+/home/laptop1/Desktop/codes/messages_middleware_oriented/rest_API/build/CMakeFiles/rebuild_cache.dir

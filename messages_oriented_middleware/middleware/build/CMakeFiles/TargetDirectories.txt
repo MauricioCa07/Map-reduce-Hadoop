@@ -1,0 +1,4 @@
+/app/build/CMakeFiles/protolib.dir
+/app/build/CMakeFiles/server.dir
+/app/build/CMakeFiles/edit_cache.dir
+/app/build/CMakeFiles/rebuild_cache.dir

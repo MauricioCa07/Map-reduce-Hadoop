@@ -8,7 +8,6 @@ class NameWordCounter(MRJob):
         self.header = None
 
     def mapper(self, _, line):
-        # Parse CSV line
         row = next(csv.reader([line]))
 
         if self.header is None:

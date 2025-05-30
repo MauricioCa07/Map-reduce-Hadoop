@@ -9,7 +9,7 @@ class NameWordCounter(MRJob):
         reader = csv.reader(StringIO(line))
         row = next(reader)
         
-        if len(row) > 3:
+        if len(row) > 4:
             director_field = row[2]
             total_ratings = row[4]
             if total_ratings != "Average_rating" and total_ratings != "nan":

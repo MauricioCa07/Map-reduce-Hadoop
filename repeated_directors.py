@@ -1,23 +1,17 @@
-import csv
 from mrjob.job import MRJob
 from mrjob.step import MRStep
+import csv 
+from io import StringIO
 
 class NameWordCounter(MRJob):
 
-    def mapper_init(self):
-        self.header = None
-
-    def mapper(self, _, line):
-        row = next(csv.reader([line]))
-
-        if self.header is None:
-            self.header = row
-        else:
-            row_dict = dict(zip(self.header, row))
-            name_field = row_dict.get("Director")
-            if name_field:
-                 yield name_field, 1
-
+    def mapper(self, key, line):
+        reader = csv.reader(StringIO(line))
+        row = next(reader)
+        if len(row) > 3:
+            director_field = row[2]
+            yield director_field, 1
+                            
     def combiner(self, key, values):
         yield key, sum(values)
 
@@ -31,7 +25,7 @@ class NameWordCounter(MRJob):
     def steps(self):
         return [
             MRStep(
-                mapper_init=self.mapper_init,
+
                 mapper=self.mapper,
                 combiner=self.combiner,
                 reducer=self.reducer
@@ -43,6 +37,9 @@ class NameWordCounter(MRJob):
 
 if __name__ == '__main__':
     NameWordCounter.run()
+
+
+
 
 
 

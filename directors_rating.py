@@ -15,7 +15,17 @@ class NameWordCounter(MRJob):
             if total_ratings != "Average_rating" and total_ratings != "nan":
                 yield director_field,(float(total_ratings),1)
             else: 
-               yield "null",(0,0)               
+               yield "null",(0,0)     
+
+    def combiner(self, key, values):
+        total_sum = 0
+        total_count = 0
+        for val in values:
+            total_sum += val[0]
+            total_count += val[1]
+        if total_count > 0:
+            yield key, (total_sum,total_count)
+
 
     def reducer(self, key, values):
         total_sum = 0
@@ -34,6 +44,7 @@ class NameWordCounter(MRJob):
         return [
             MRStep(
                 mapper=self.mapper,
+                combiner=self.combiner,
                 reducer=self.reducer
             ),
             MRStep(

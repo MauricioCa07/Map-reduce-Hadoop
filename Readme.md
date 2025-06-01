@@ -11,23 +11,23 @@ The goal was to demonstrate a complete **distributed data processing pipeline**,
 
 ---
 
-## 🔍 What Did We Analyze?
+##  What Did We Analyze?
 
 We implemented **4 MapReduce jobs** using the [`MRJob`](https://mrjob.readthedocs.io/en/latest/) library. Here's what each job does:
 
-1. **🎬 Number of Movies Directed by Each Director**  
+1. **Number of Movies Directed by Each Director**  
    **File:** `repeated_directors.py`  
    ➤ Counts how many movies were directed by each director.
 
-2. **⭐ Average Rating of Each Director**  
+2. **Average Rating of Each Director**  
    **File:** `directors_rating.py`  
    ➤ Calculates the average rating of all movies directed by each director.
 
-3. **🎭 Number of Movies Each Actor Appeared In**  
+3. **Number of Movies Each Actor Appeared In**  
    **File:** `repeated_actors.py`  
    ➤ Counts how many movies each actor has participated in.
 
-4. **🔤 Letter Frequency in Movie Titles**  
+4. **Letter Frequency in Movie Titles**  
    **File:** `letters_in_title.py`  
    ➤ Computes the frequency of each letter (excluding spaces) in all movie titles.
 
@@ -39,10 +39,10 @@ We implemented **4 MapReduce jobs** using the [`MRJob`](https://mrjob.readthedoc
 
 1. Clone this repository:
    ```bash
-    git clone <your-repo-url>
-    cd <your-repo-folder>
+    git clone https://github.com/MauricioCa07/Map-reduce-Hadoop.git
+    cd Map-reduce-Hadoop
     ```
-2. download the [**The Movies Dataset**](https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset/data)
+2. download the [The Movies Dataset](https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset/data)
 
 3. Run the following commands:
 
@@ -65,7 +65,7 @@ We implemented **4 MapReduce jobs** using the [`MRJob`](https://mrjob.readthedoc
 
 
 1. First, create an EMR cluster: 
-    [** How to create an EMR cluster **](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-gs.html)
+    [How to create an EMR cluster](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-gs.html)
 
 2. From your local machine, run:
 

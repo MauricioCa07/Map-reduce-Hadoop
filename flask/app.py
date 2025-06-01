@@ -20,7 +20,7 @@ def leer_datos(ruta_archivo: str):
 
     return valores, etiquetas
 
-@app.route("/<metodo>/<descripion>")
+@app.route("/<metodo>/<descripcion>")
 def director_vs_rating(metodo,descripcion):
     ruta = "../"+metodo+".txt"
     valores, etiquetas = leer_datos(ruta)

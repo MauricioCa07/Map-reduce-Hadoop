@@ -1,0 +1,56 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Listado de Valores</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+      line-height: 1.5;
+    }
+    h1 {
+      text-align: center;
+    }
+    .lista-datos {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 0;
+      list-style: none;
+    }
+    .lista-datos li {
+      padding: 8px 12px;
+      border-bottom: 1px solid #ccc;
+    }
+    .lista-datos li:nth-child(odd) {
+      background-color: #f9f9f9;
+    }
+    .nombre {
+      font-weight: bold;
+    }
+    .valor {
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+    {% if titulo%}
+        <h1>Listado de {{ titulo }}</h1>
+    {% endif %}
+
+    {% if datos %}
+        <ul class="lista-datos">
+        {% for nombre, valor in datos %}
+            <li>
+            <span class="nombre">{{ nombre }}</span>:
+            <span class="valor">{{ valor }}</span>
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+    <p>No hay datos disponibles para mostrar.</p>
+  {% endif %}
+
+</body>
+</html>

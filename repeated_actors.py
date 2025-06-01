@@ -37,7 +37,7 @@ class NameWordCounter(MRJob):
     def reducer_sort(self, key, count_actor_pairs):
         sorted_pairs = sorted(count_actor_pairs)
         for count, actor in sorted_pairs:
-            yield actor, count
+            yield count, actor
     
     def steps(self):
         return [
